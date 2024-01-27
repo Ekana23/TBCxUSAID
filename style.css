@@ -1,0 +1,450 @@
+/* Global Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+/* Specific Sections with Padding */
+
+header,
+#introHeader,
+#introTextConteiner,
+#courseTitle,
+#coursesGrid,
+#slideShowContainer,
+.questions {
+  padding: 0 18%;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: black;
+  opacity: 0, 9;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+#mainLogo {
+  margin-right: auto;
+}
+
+#TBCxAkademiaLogoPng {
+  height: 200px;
+}
+
+.mainMenuList {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+#tbcXUsaid {
+  color: rgb(69, 172, 223);
+}
+
+span {
+  text-transform: uppercase;
+}
+
+/* DropDown Menu */
+
+.menuBtn {
+  background: none;
+  color: rgb(69, 172, 223);
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.menuBtn:hover {
+  color: #717171;
+}
+
+.dropDownContent {
+  display: none;
+  position: absolute;
+  background: none;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropDownContent .dropDownList {
+  display: block;
+  text-decoration: none;
+  padding: 12px 0;
+  color: white;
+}
+
+.dropDownList {
+  color: rgb(69, 172, 223);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: block;
+}
+
+/* Introduction  Container*/
+
+.introConteiner {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: 80px;
+  padding-bottom: 20px;
+}
+
+#introduction {
+  background-image: url("./img/background.png");
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+}
+
+#introHeader {
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  padding: 155px 15%;
+}
+
+#introTextConteiner {
+  background-color: #323030;
+  padding: 20px 15%;
+}
+
+#introText {
+  font-size: 25px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+#moreInfo {
+  font-size: 20px;
+  margin: 0;
+  color: rgb(69, 172, 223);
+}
+
+#moreInfo:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+/*   Grid Section   */
+
+#courseTitle {
+  font-size: 23px;
+  margin: 40px 0;
+}
+
+#coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  grid-column-gap: 20px;
+}
+
+.courseBox {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.coursePic {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.courseBox h3,
+.courseBox p {
+  margin: 30px 0 0 15px;
+}
+
+.courseLink {
+  display: inline-block;
+  color: rgb(69, 172, 223);
+  margin: 90px 0 30px 15px;
+}
+
+.courseLink:hover {
+  color: rgb(45, 125, 165);
+}
+
+/* Project Partners Section  */
+
+#partnersSlideShow {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #323030;
+  min-width: 100%;
+  height: 300px;
+  gap: 50px;
+}
+
+.partnersTitle {
+  font-size: 30px;
+}
+
+#partnersSlideShow > h3 {
+  margin-top: 30px;
+  margin-left: 18%;
+}
+
+#slideShowContainer {
+  position: relative;
+}
+
+.oneSlide {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.partnersIcon {
+  width: 28%;
+}
+
+/* Dots */
+
+#dots {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #bbb;
+  margin: 0 2px;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Next and Prev Buttons */
+
+.prevBtn,
+.nextBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  margin: 0 9%;
+  color: white;
+  font-size: 30px;
+  transition: 0.6s ease;
+}
+
+.nextBtn {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  color: #bbb;
+}
+
+/*  Questions Section */
+
+.questions {
+  padding: 50px 18%;
+}
+
+.questions > #questionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#questionsHeader > a {
+  font-size: 23px;
+  color: rgb(69, 172, 223);
+}
+
+#questionsHeader > a:hover {
+  color: #717171;
+}
+
+#questionsHeader > p {
+  font-size: 30px;
+}
+
+.no-border-bottom {
+  border: none;
+}
+
+.questionBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(58, 58, 58);
+  padding: 20px 0;
+  cursor: pointer;
+  padding: 30px 0;
+}
+
+.answer {
+  display: none;
+  transition: fit-content 0.4s ease-out;
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(58, 58, 58);
+}
+
+.answer > p {
+  padding-top: 30px;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.question.open .answer {
+  display: block;
+  max-height: fit-content;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #1d211d;
+  height: auto;
+  padding: 60px 18%;
+}
+
+#end {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+#contact {
+  text-align: right;
+}
+
+#footerLogo {
+  display: block;
+  width: 100px;
+}
+
+#facebook,
+#youtube {
+  margin: 0 2px 0 0;
+}
+
+.contactIcon {
+  width: 40px;
+}
+
+#contactUs {
+  font-size: 17px;
+  padding: 10px 35px;
+  background-color: rgb(69, 172, 223);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+#contactUs:hover {
+  background-color: #b3aeae;
+  color: #000000;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+/* MEDIA */
+
+@media (max-width: 750px) {
+  #mainMenu {
+    display: none;
+  }
+  #coursesGrid {
+    grid-template-columns: 300px;
+  }
+
+  header,
+  #introTextConteiner,
+  #courseTitle,
+  #coursesGrid,
+  #slideShowContainer {
+    padding: 0 10px;
+  }
+  #introHeader {
+    padding: 155px 20px;
+  }
+  .questionBtn {
+    width: auto;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .menuBtn {
+    display: none;
+  }
+  #coursesGrid {
+    grid-template-columns: 300px 300px;
+  }
+  header,
+  #introTextConteiner,
+  #courseTitle,
+  #coursesGrid,
+  #slideShowContainer {
+    padding: 0 20px;
+  }
+  #introHeader {
+    padding: 155px 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #coursesGrid {
+    grid-template-columns: 300px 300px 300px;
+  }
+  .menuBtn {
+    display: none;
+  }
+  #introHeader {
+    padding: 155px 18%;
+  }
+}
